@@ -1,2 +1,3 @@
 # BreadcrumbsCellMaker_DataParser
-testing repo for Biothings API data integration
+
+Data parser for new [data source](http://xteam.xbio.top/CellMarker/download.jsp)
