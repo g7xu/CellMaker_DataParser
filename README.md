@@ -4,20 +4,15 @@
 <h3 align="center">BreadcrumbsCellMaker_DataParser</h3>
 
   <p align="center">
-    This repo contains code that parse raw CellMarker_Data into JSON file that can be used by Dumper in Biothings studio. The dataset can be found [here](http://xteam.xbio.top/CellMarker/download.jsp)
+    This repo contains code that parse raw CellMarker_Data into JSON file that can be used by Dumper in Biothings studio.
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
-  </p>
+    </p>
 </div>
 
-
+The dataset can be found [here](http://xteam.xbio.top/CellMarker/download.jsp)
 
 <!-- TABLE OF CONTENTS -->
 <details>
