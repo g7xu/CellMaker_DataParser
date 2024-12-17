@@ -77,7 +77,39 @@ There in total 4 different different Cell_Marker Dataset but all of them have th
 ## Dataset Features
 This section will discuss some of the features of the data set. All of the work can be found in the ([Jupyter Notebook](https://github.com/g7xu/CellMaker_DataParser/blob/main/eda/all_cell_eda.ipynb)) in the EDA folder.
 
+### Missingness of UberonOntologyID
+Most of the missing UberonOntologyID is due to "Undefined" tissue-type
 
+### Missingness of CellOntologyID
+Most of the missing CellOntologyID is due to "Cancer stem cell" in cellName
+
+### Missingness of geneSymbol and geneID
+They either exist or are missing at the same time
+
+### Missingness of proteinName and proteinID
+They either exist or are missing at the same time
+
+### list like str value in columns
+In the following columns:
+- geneSymbol
+- geneID
+- proteinName
+- proteinID
+values are stored in list-like strings. Here are Example of strings:
+- "A"
+- "A, B"
+- "A B"
+- "A, [A, B], C"
+- "A, B, C, D, [E, F], [G, H I]"
+We expected the parsing result to be:
+- ['A']
+- ['A', 'B']
+- ['A B']
+- ['A', ['A', 'B'], 'C']
+- ['A', 'B', 'C', 'D', ['E', 'F'], ['G', 'H I']]
+
+### Missingness of company value
+91% of the value in the `company` column is missing, but it is missing by design. There are in total 4 different kinds of values in `markerResource` column which are "Experiment", "Review", "Single-cell sequencing", and "Company". The `company` column is not missing when the value in `markerResource` column is "company" 
 
 <!-- Data Processing Workflow -->
 ## Data Processing Workflow
