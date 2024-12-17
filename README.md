@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-<h3 align="center">BreadcrumbsCellMaker_DataParser</h3>
+<h3 align="center">CellMaker_DataParser</h3>
 
   <p align="center">
     This repo contains code that parses raw CellMarker_Data into a JSON file that Dumper can use in Biothings Studio.
