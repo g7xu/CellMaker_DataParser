@@ -41,7 +41,7 @@ The dataset can be found [here](http://xteam.xbio.top/CellMarker/download.jsp). 
 
 <!-- Dataset Features -->
 ## Dataset Features
-This section will discuss some of the features of the data set. All of the work can be found here [] in the eda folder.
+This section will discuss some of the features of the data set. All of the work can be found in the ([Jupyter Notebook]()) in the EDA folder.
 
 
 
