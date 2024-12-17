@@ -114,7 +114,10 @@ We expected the parsing result to be:
 <!-- Data Processing Workflow -->
 ## Data Processing Workflow
 
-
+- concatenating **all_cell_markers** df and **all_singleCell_markers** df
+- replacing all the "undefined" tissue with NaN value
+- converting all the listLikeString into the list for column [geneSymbol, geneID, proteinName, proteinName] 
+- remove all row with missing geneID
 
 <!-- CONTACT -->
 ## Contact
