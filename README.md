@@ -1,18 +1,10 @@
-
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
 <h3 align="center">BreadcrumbsCellMaker_DataParser</h3>
 
   <p align="center">
-    project_description
+    This repo contains code that parse raw CellMarker_Data into JSON file that can be used by Dumper in Biothings studio. The dataset can be found [here](http://xteam.xbio.top/CellMarker/download.jsp)
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
@@ -58,7 +50,7 @@
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 
-Data parser for new [data source](http://xteam.xbio.top/CellMarker/download.jsp)
+Data parser for new 
 
 About this dataset:
 These records contain data about molecules expressed on the surface, within, or secreted by cells. These markers are used to identify and classify the types, states, or functions of cells within a population. 
