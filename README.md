@@ -70,7 +70,8 @@ There in total 4 different different Cell_Marker Dataset but all of them have th
 - **Company**: the company associated with the resources
     - most of them are missing and only exist when the `markerResource` is Company
 
-
+### Data Set relationships
+![Product Name Screen Shot](image/CellMarker Data relationships.png)
 
 <!-- Dataset Features -->
 ## Dataset Features
