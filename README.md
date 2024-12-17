@@ -95,12 +95,14 @@ In the following columns:
 - geneID
 - proteinName
 - proteinID
+
 values are stored in list-like strings. Here are Example of strings:
 - "A"
 - "A, B"
 - "A B"
 - "A, [A, B], C"
 - "A, B, C, D, [E, F], [G, H I]"
+  
 We expected the parsing result to be:
 - ['A']
 - ['A', 'B']
