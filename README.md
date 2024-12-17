@@ -18,7 +18,7 @@
       <a href="#about-the-project">About the dataset</a>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">Dataset Features</a>
     </li>
     <li><a href="#usage">Data Processing Workflow</a></li>
     <li><a href="#contact">Contact</a></li>
