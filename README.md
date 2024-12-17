@@ -21,6 +21,7 @@
       <a href="#getting-started">Dataset Features</a>
     </li>
     <li><a href="#usage">Data Processing Workflow</a></li>
+    <li><a href="#Export JSON file outline">Export JSON file outline</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -113,13 +114,34 @@ We expected the parsing result to be:
 ### Missingness of company value
 91% of the value in the `company` column is missing, but it is missing by design. There are in total 4 different kinds of values in `markerResource` column which are "Experiment", "Review", "Single-cell sequencing", and "Company". The `company` column is not missing when the value in `markerResource` column is "company" 
 
+<!-- Export JSON file outline -->
+## Export JSON file outline
+geneID
+ - geneSymbol: str
+ - proteinID: dict
+    - proteinName
+ - cellMarker: dict
+    - speciesType: str
+    - tissueType: str
+    - UberonOntologyID: str
+    - cancerType: str
+    - cellType: str
+    - cellName: str
+    - CellOntologyID: str
+    - markerResource: tuple
+        one of this
+        - Experiment: PMID
+        - Review: PMID
+        - Single-cell sequencing: PMID
+        - Company: Company name
+
 <!-- Data Processing Workflow -->
 ## Data Processing Workflow
 
 - concatenating **all_cell_markers** df and **all_singleCell_markers** df
 - replacing all the "undefined" tissue with NaN value
 - converting all the listLikeString into the list for column [geneSymbol, geneID, proteinName, proteinName] 
-- remove all row with missing geneID
+- remove all rows with missing "geneID"
 
 <!-- CONTACT -->
 ## Contact
