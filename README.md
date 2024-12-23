@@ -103,6 +103,7 @@ values are stored in list-like strings. Here are Example of strings:
 - "A B"
 - "A, [A, B], C"
 - "A, B, C, D, [E, F], [G, H I]"
+- NaN (missing value)
   
 We expected the parsing result to be:
 - ['A']
@@ -110,6 +111,9 @@ We expected the parsing result to be:
 - ['A B']
 - ['A', ['A', 'B'], 'C']
 - ['A', 'B', 'C', 'D', ['E', 'F'], ['G', 'H I']]
+- ['NA']
+
+PS. I convert missing value to ['NA'] is for the purpose of finding mismatch value
 
 ### Missingness of company value
 91% of the value in the `company` column is missing, but it is missing by design. There are in total 4 different kinds of values in `markerResource` column which are "Experiment", "Review", "Single-cell sequencing", and "Company". The `company` column is not missing when the value in `markerResource` column is "company" 
