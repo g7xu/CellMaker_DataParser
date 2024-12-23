@@ -118,14 +118,14 @@ PS. I convert missing value to ['NA'] is for the purpose of finding mismatch val
 ### element mismatch among the list-like str value columns
 some of the CellMarker records contain mismatch values in its list-like strs. Mismatch values means in a single record, the number of elements in the columns [`geneSymbol`, `geneID`, `proteinName`, `proteinID`] is not the same. For example, in a single record, if there are 5 elements in the `geneSymbol` and 4 elements in `geneID`, this record will be recognized as a record with mismatch values. So far, we have identified two kinds of mismatch:
 1. Additional NA at the end
-![Mismatch example #1]("img/Mismatch example #1.png")
+![Mismatch example #1](img/Mismatch_example1.png)
 2. total mismatch
-![Mismatch example #2]("img/Mismatch example #2.png")
-![Mismatch example #3]("img/Mismatch example #3.png")
+![Mismatch example #2](img/Mismatch_example2.png)
+![Mismatch example #3](img/Mismatch_example3.png)
 
 **Such mismatch needed to carefully disucss since the the information in these reocrd might not corresponding to each other at all**. In total there are 28 mismatched records(0.6% of the entire dataset). And of these mismatched records, majority of them come from single-cell sequencing.
 
-![Mismatch example #3]("img/mt_MakerDistribution.png")
+![Mismatch pie chart](img/mt_MakerDistribution.png)
 
 
 ### Missingness of company value
