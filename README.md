@@ -115,7 +115,7 @@ We expected the parsing result to be:
 
 PS. I convert missing value to ['NA'] is for the purpose of finding mismatch value
 
-### element mismatch among the list-like str value columns
+### Element mismatch among the list-like str value columns
 some of the CellMarker records contain mismatch values in its list-like strs. Mismatch values means in a single record, the number of elements in the columns [`geneSymbol`, `geneID`, `proteinName`, `proteinID`] is not the same. For example, in a single record, if there are 5 elements in the `geneSymbol` and 4 elements in `geneID`, this record will be recognized as a record with mismatch values. So far, we have identified two kinds of mismatch:
 1. Additional NA at the end
 ![Mismatch example #1](img/Mismatch_example1.png)
@@ -127,17 +127,18 @@ some of the CellMarker records contain mismatch values in its list-like strs. Mi
 
 ![Mismatch pie chart](img/mt_MakerDistribution.png)
 
+#### resolution
+The relationship between protein and gene in nature is 1 to N. Therefore, there can never be guarantee that the dataset is 1 to 1 match. Thus, **we will drop column `proteinName` and `proteinID`**
 
 ### Missingness of company value
 91% of the value in the `company` column is missing, but it is missing by design. There are in total 4 different kinds of values in `markerResource` column which are "Experiment", "Review", "Single-cell sequencing", and "Company". The `company` column is not missing when the value in `markerResource` column is "company" 
 
 <!-- Export JSON file outline -->
 ## Export JSON file outline
-geneID
- - geneSymbol: str
- - proteinID: dict
-    - proteinName
- - cellMarker: dict
+`geneID`(root value)
+ - geneSymbol: a set of `geneSymbol`
+ - associate_proteins: a set of tuple, where each tuple is (`proteinID`, `proteinName`)
+ - associate_cellMarkers: a dictionary with key as `cellMarker` and value as a list
     - speciesType: str
     - tissueType: str
     - UberonOntologyID: str
@@ -155,10 +156,11 @@ geneID
 <!-- Data Processing Workflow -->
 ## Data Processing Workflow
 
-- concatenating **all_cell_markers** df and **all_singleCell_markers** df
-- replacing all the "undefined" tissue with NaN value
-- converting all the listLikeString into the list for column [geneSymbol, geneID, proteinName, proteinName] 
+- concatenating **all_cell_markers** dataframe and **all_singleCell_markers** dataframe
+- drop `proteinName` and `proteinID` columns
 - remove all rows with missing "geneID"
+- replacing all the "undefined" in `tissueType` column with NaN value
+- converting all the listLikeStrings into the list for column [cellMarker, geneSymbol, geneID] 
 
 <!-- CONTACT -->
 ## Contact
@@ -169,4 +171,4 @@ Guoxuan Xu - [@github_profile](https://github.com/g7xu) - g7xu@ucsd.edu
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* Apperciate Dr. Wu and Jason Lin for the help!
+* Apperciate Dr. Chunlei Wu and Jason Lin for the help!
