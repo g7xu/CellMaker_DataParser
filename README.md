@@ -180,8 +180,36 @@ let's look at an example on how the data is being structured following the templ
 
 The resulting data field should be:
 ```python
-"Is cool~~"
+{
+    '_id': '248',
+    'symbol': 'ALPI',
+    'cellMarkers': [
+        {
+            'name': 'Intestinal Alkaline Phosphatase',
+            'speciesType': 'Human',
+            'tissueType': 'Kidney',
+            'UberonOntologyID': 'UBERON_0002113',
+            'cancerType': 'Normal',
+            'cellType': 'Normal cell',
+            'cellName': 'Proximal tubular cell',
+            'markerResource': 'Experiment',
+            'PMID': '9263997'  
+        },
+        {
+            'name': 'ALPI',
+            'speciesType': 'Human',
+            'tissueType': 'Small intestine',
+            'UberonOntologyID': 'UBERON_0002108',
+            'cancerType': 'Normal',
+            'cellType': 'Normal cell',
+            'cellName': 'Enterocyte progenitor cell',
+            'markerResource': 'Single-cell sequencing',
+            'PMID': '29802404'
+        },
+    ]
+}
 ```
+Notice, we are using the first template since the markerResource is either Experiment or Single-cell sequencing.
 
 <!-- Data Processing Workflow -->
 ## Data Processing Workflow
