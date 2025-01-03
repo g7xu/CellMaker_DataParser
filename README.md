@@ -135,23 +135,37 @@ The relationship between protein and gene in nature is 1 to N. Therefore, there 
 
 <!-- Export JSON file outline -->
 ## Export JSON file outline
-`geneID`(root value)
- - geneSymbol: a set of `geneSymbol`
- - associate_proteins: a set of tuple, where each tuple is (`proteinID`, `proteinName`)
- - associate_cellMarkers: a dictionary with key as `cellMarker` and value as a list
-    - speciesType: str
-    - tissueType: str
-    - UberonOntologyID: str
-    - cancerType: str
-    - cellType: str
-    - cellName: str
-    - CellOntologyID: str
-    - markerResource: tuple
-        one of this
-        - Experiment: PMID
-        - Review: PMID
-        - Single-cell sequencing: PMID
-        - Company: Company name
+```python
+{
+  "_id": geneID,
+  "symbol": geneSymbol,
+  "cellMarkers": {
+    "name": cellMarker,
+    "speciesType": speciesType,
+    "tissueType": tissueType,
+    "UberonOntologyID": UberonOntologyID,
+    "cancerType": cancerType，
+    "cellType": cellType
+    "cellName": cellName
+    "CellOntologyID": CellOntologyID
+    "markerResource": either "Experiment", "Single-cell sequencing", "Review"
+    "PMID": PMID
+    },
+    {
+    "name": cellMarker,
+    "speciesType": speciesType,
+    "tissueType": tissueType,
+    "UberonOntologyID": UberonOntologyID,
+    "cancerType": cancerType，
+    "cellType": cellType
+    "cellName": cellName
+    "CellOntologyID": CellOntologyID
+    "markerResource": "Company"
+    "other Resources": Company_Name
+    }
+  }
+}
+```
 
 <!-- Data Processing Workflow -->
 ## Data Processing Workflow
@@ -161,6 +175,9 @@ The relationship between protein and gene in nature is 1 to N. Therefore, there 
 - remove all rows with missing "geneID"
 - replacing all the "undefined" in `tissueType` column with NaN value
 - converting all the listLikeStrings into the list for column [cellMarker, geneSymbol, geneID] 
+
+- sometimes, there are duplicate rows within the dataset
+
 
 <!-- CONTACT -->
 ## Contact
