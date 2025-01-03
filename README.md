@@ -135,6 +135,10 @@ The relationship between protein and gene in nature is 1 to N. Therefore, there 
 
 <!-- Export JSON file outline -->
 ## Export JSON file outline
+This is the template for the output data field. The structure within the cellMarkers field can follow two different formats, depending on the value of the markerResource attribute:
+- When markerResource is “Experiment,” “Single-cell sequencing,” or “Review”: The cellMarkers field includes the attribute PMID.
+- When markerResource is “Company”: The cellMarkers field includes the attribute Company.
+
 ```python
 {
   "_id": geneID,
@@ -161,10 +165,22 @@ The relationship between protein and gene in nature is 1 to N. Therefore, there 
     "cellName": cellName
     "CellOntologyID": CellOntologyID
     "markerResource": "Company"
-    "other Resources": Company_Name
+    "Company": Company_Name
     }
   }
 }
+```
+## Example
+let's look at an example on how the data is being structured following the template above. The data here is:
+
+| speciesType   | tissueType      | UberonOntologyID   | cancerType   | cellType    | cellName                   |   CellOntologyID | markerResource         |     PMID |   Company | cellMarker                      | geneSymbol   |   geneID |
+|:--------------|:----------------|:-------------------|:-------------|:------------|:---------------------------|-----------------:|:-----------------------|---------:|----------:|:--------------------------------|:-------------|---------:|
+| Human         | Kidney          | UBERON_0002113     | Normal       | Normal cell | Proximal tubular cell      |              nan | Experiment             |  9263997 |       nan | Intestinal Alkaline Phosphatase | ALPI         |      248 |
+| Human         | Small intestine | UBERON_0002108     | Normal       | Normal cell | Enterocyte progenitor cell |              nan | Single-cell sequencing | 29802404 |       nan | ALPI                            | ALPI         |      248 |
+
+The resulting data field should be:
+```python
+"Is cool~~"
 ```
 
 <!-- Data Processing Workflow -->
