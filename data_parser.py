@@ -6,11 +6,35 @@ import os
 import re
 
 import pandas as pd
-
-# from biothings import config
+from biothings import config
 from biothings.utils.dataload import dict_convert, dict_sweep
 
-# logging = config.loggers
+logging = config.loggers
+
+
+def str_to_list(listLikeStr: str) -> list:
+    """Case str-like-list into actual list, nested list will be expand
+
+    Args:
+        listLikeStr (str): the list like str
+
+    Return:
+        the converted list
+
+    >>> str_to_list("A")
+    ['A']
+    >>> str_to_list("A, B")
+    ['A', 'B']
+    >>> str_to_list("A B")
+    ['A B']
+    >>> str_to_list("A, [A, B], C")
+    ['A', 'A', 'B', 'C']
+    >>> str_to_list("A, B, C, D, [E, F], [G, H I]")
+    ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H I']
+    """
+    parsed_str = re.sub(r"[\[\]]", "", listLikeStr)
+    parsed_str_list = parsed_str.split(",")
+    return [val.strip() for val in parsed_str_list]
 
 
 def pairUp_seq_info(value_dict: dict) -> list:
@@ -22,7 +46,17 @@ def pairUp_seq_info(value_dict: dict) -> list:
     Return:
         a list of dictionary where the each dict is a pairings
     """
-    print(value_dict)
+    key_list = []
+    value_list = []
+    temp = []
+    for key, listLikeStr in value_dict.items():
+        key_list.append(key)
+        value_list.append(str_to_list(listLikeStr))
+
+    for matched_values in zip(*value_list):
+        temp.append({key: value for key, value, in zip(key_list, matched_values)})
+
+    return temp
 
 
 def load_annotations(data_folder):
@@ -62,8 +96,6 @@ def load_annotations(data_folder):
             continue
 
         _id = record["geneid"]
-        # cell_marker = record["cellMarker"]
-        results.setdefault(_id, []).append(record)
 
         # zip these elements together to get multiple copies
         ZIP_COLUMNS = ["cellmarker", "genesymbol", "geneid"]
@@ -71,15 +103,19 @@ def load_annotations(data_folder):
         for gene_expression in pairUp_seq_info(
             {key: record[key] for key in record if key in ZIP_COLUMNS}
         ):
-            print(gene_expression)
-            return
+            results.setdefault(_id, []).append(
+                {k: v for k, v in gene_expression.items() if k != "geneid"}
+            )
 
     for _id, docs in results.items():
         doc = {"_id": _id, "cellMarker": docs}
         yield doc
 
-    # return results
-
 
 if __name__ == "__main__":
-    load_annotations("data")
+    import doctest
+
+    doctest.testmod()
+    x = load_annotations("data")
+    breakpoint()
+    # print(str_to_list("Intestinal Alkaline Phosphatase"))
