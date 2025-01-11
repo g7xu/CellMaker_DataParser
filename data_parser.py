@@ -1,15 +1,15 @@
 # this file will parse the data into json
 
 import csv
-import math
 import os
 import re
 
-import pandas as pd
+import numpy as np
+import pandas
 from biothings import config
 from biothings.utils.dataload import dict_convert, dict_sweep
 
-logging = config.loggers
+logging = config.logger
 
 
 def str_to_list(listLikeStr: str) -> list:
