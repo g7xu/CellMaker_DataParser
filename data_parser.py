@@ -6,10 +6,11 @@ import re
 
 import numpy as np
 import pandas
-from biothings import config
+
+# from biothings import config
 from biothings.utils.dataload import dict_convert, dict_sweep
 
-logging = config.logger
+# logging = config.logger
 
 
 def str_to_list(listLikeStr: str) -> list:
@@ -95,14 +96,13 @@ def load_annotations(data_folder):
         if record["geneid"] == "NA":
             continue
 
-        _id = record["geneid"]
-
         # zip these elements together to get multiple copies
         ZIP_COLUMNS = ["cellmarker", "genesymbol", "geneid"]
 
         for gene_expression in pairUp_seq_info(
             {key: record[key] for key in record if key in ZIP_COLUMNS}
         ):
+            _id = gene_expression["geneid"]
             results.setdefault(_id, []).append(
                 {k: v for k, v in gene_expression.items() if k != "geneid"}
             )
@@ -117,5 +117,9 @@ if __name__ == "__main__":
 
     doctest.testmod()
     x = load_annotations("data")
+
+    y = [i for i in x]
     breakpoint()
+    print(y)
+
     # print(str_to_list("Intestinal Alkaline Phosphatase"))
