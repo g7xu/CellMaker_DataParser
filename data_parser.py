@@ -60,6 +60,13 @@ def pairUp_seq_info(value_dict: dict) -> list:
     return temp
 
 
+def make_uniqueMarker(cellMarkers: list) -> list:
+
+    cellMarkers = list({tuple(sorted(marker.items())) for marker in cellMarkers})
+    # Convert tuples back to dictionaries
+    return [dict(marker) for marker in cellMarkers]
+
+
 def load_annotations(data_folder):
     """Converting data into expected JSON format
 
@@ -107,7 +114,11 @@ def load_annotations(data_folder):
                 {k: v for k, v in gene_expression.items() if k != "geneid"}
             )
 
-    for _id, docs in results.items():
+    results_unqiueMarker = {
+        geneid: make_uniqueMarker(markers) for geneid, markers in results.items()
+    }
+
+    for _id, docs in results_unqiueMarker.items():
         doc = {"_id": _id, "cellMarker": docs}
         yield doc
 
