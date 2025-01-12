@@ -63,7 +63,6 @@ def pairUp_seq_info(value_dict: dict) -> list:
 def make_uniqueMarker(cellMarkers: list) -> list:
 
     cellMarkers = list({tuple(sorted(marker.items())) for marker in cellMarkers})
-    # Convert tuples back to dictionaries
     return [dict(marker) for marker in cellMarkers]
 
 
@@ -110,6 +109,8 @@ def load_annotations(data_folder):
             {key: record[key] for key in record if key in ZIP_COLUMNS}
         ):
             _id = gene_expression["geneid"]
+            if _id.casefold() == "na":
+                continue
             results.setdefault(_id, []).append(
                 {k: v for k, v in gene_expression.items() if k != "geneid"}
             )
