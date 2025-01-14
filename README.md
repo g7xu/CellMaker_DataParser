@@ -183,26 +183,24 @@ The resulting data field should be:
 {
     '_id': '248',
     'symbol': 'ALPI',
-    'cellMarkers': [
+    'geneRelatedCells': [
         {
-            'name': 'Intestinal Alkaline Phosphatase',
-            'speciesType': 'Human',
+            'cellName': 'Proximal tubular cell',
+            'cellType': 'Normal cell',
+            'cancerType': 'Normal',
             'tissueType': 'Kidney',
             'UberonOntologyID': 'UBERON_0002113',
-            'cancerType': 'Normal',
-            'cellType': 'Normal cell',
-            'cellName': 'Proximal tubular cell',
+            'speciesType': 'Human',
             'markerResource': 'Experiment',
-            'PMID': '9263997'  
+            'PMID': '9263997'
         },
         {
-            'name': 'ALPI',
-            'speciesType': 'Human',
+            'cellName': 'Enterocyte progenitor cell',
+            'cellType': 'Normal cell',
+            'cancerType': 'Normal',
             'tissueType': 'Small intestine',
             'UberonOntologyID': 'UBERON_0002108',
-            'cancerType': 'Normal',
-            'cellType': 'Normal cell',
-            'cellName': 'Enterocyte progenitor cell',
+            'speciesType': 'Human',
             'markerResource': 'Single-cell sequencing',
             'PMID': '29802404'
         },
