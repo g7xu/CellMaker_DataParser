@@ -118,14 +118,14 @@ def load_annotations(data_folder):
         record = dict_convert(record, keyfn=lambda k: k.replace(" ", "_").lower())
 
         # ignore geneID that is missing
-        if record[GENE_ID].casefold() == "na":
+        if record[GENE_ID].casefold() == "na" or record[GENE_ID].casefold() == '':
             continue
 
         # zip these elements together to get multiple copies
         try: 
             for gene_expression in pairUp_seq_info(select_items(record, ZIP_COLUMNS)):
                 _id = gene_expression["geneid"]
-                if _id.casefold() == "na":
+                if _id.casefold() == "na" or _id.casefold() == "":
                     continue
                 results.setdefault(_id, {})
                 gene_expression_dict = results[_id]
