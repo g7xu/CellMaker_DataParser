@@ -141,7 +141,7 @@ def load_annotations(data_folder):
                             "UberonOntologyID": record['uberonontologyid'],
                             "speciesType": record['speciestype'],
                             "markerResource": record['markerresource'],
-                            "PMID": record['pmid']
+                            # "PMID": record['pmid']
                         })
                     )
                 else:
@@ -155,7 +155,7 @@ def load_annotations(data_folder):
                             "UberonOntologyID": record['uberonontologyid'],
                             "speciesType": record['speciestype'],
                             "markerResource": record['markerresource'],
-                            "Company": record['company']
+                            # "Company": record['company']
                         })
                     )
         except ValueError as e:
