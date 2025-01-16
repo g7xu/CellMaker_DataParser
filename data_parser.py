@@ -64,8 +64,8 @@ def pairUp_seq_info(value_dict: dict) -> list:
     keys = list(value_dict.keys())
     values = [str_to_list(value) for value in value_dict.values()]
 
-    if not all(len(v) == len(next(iter(values))) for v in values):
-        raise ValueError("All lists in value_dict must have the same length")
+    # if not all(len(v) == len(next(iter(values))) for v in values):
+    #     raise ValueError("All lists in value_dict must have the same length")
 
     return [dict(zip(keys, combination)) for combination in zip(*values)]
 
@@ -164,9 +164,6 @@ def load_annotations(data_folder):
             continue
 
             
-            # .append(
-            #     {k: v for k, v in gene_expression.items() if k != "geneid"}
-            # )
     for _id, related_info in results.items():
         yield {
             "_id": _id,
@@ -180,7 +177,7 @@ if __name__ == "__main__":
     doctest.testmod()
     x = load_annotations("data")
 
-    y = [i for i in x]
+    y = [i['_id'] for i in x]
     breakpoint()
     # print(y)
 
