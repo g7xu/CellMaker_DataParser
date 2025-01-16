@@ -11,7 +11,16 @@ import pandas
 from biothings.utils.dataload import dict_convert, dict_sweep
 
 # logging = config.logger
-
+GENE_ID = "geneid"
+GENE_SYMBOL = "genesymbol"
+MARKER_RESOURCE = "markerresource"
+CELL_INFO_KEYS = [
+    "cellontologyid", "cellname", "celltype", "cancertype", 
+    "tissuetype", "uberonontologyid", "speciestype", 
+    "markerresource", "pmid", "company"
+]
+ZIP_COLUMNS = [GENE_ID, GENE_SYMBOL]
+FILES = ["all_cell_markers.txt", "Single_cell_markers.txt"]
 
 def str_to_list(listLikeStr: str) -> list:
     """Case str-like-list into actual list, nested list will be expand
@@ -37,27 +46,28 @@ def str_to_list(listLikeStr: str) -> list:
     parsed_str_list = parsed_str.split(",")
     return [val.strip() for val in parsed_str_list]
 
-
 def pairUp_seq_info(value_dict: dict) -> list:
-    """pair up all the element in each value of the dictionary
+    """Pair up all the elements in each value of the dictionary
 
     Args:
-        value_dict (dict): values that needs to be paired up
+        value_dict (dict): values that need to be paired up
 
-    Return:
-        a list of dictionary where the each dict is a pairings
+    Returns:
+        list[dict]: A list of dictionaries where each dict contains a pairing
+        of keys with corresponding elements from the value lists.
+    >>> pairUp_seq_info({"a": "1, 2", "b": "3, 4"})
+    [{'a': '1', 'b': '3'}, {'a': '2', 'b': '4'}]
+    >>> pairUp_seq_info({"a": '1'})
+    [{'a': '1'}]
     """
-    key_list = []
-    value_list = []
-    temp = []
-    for key, listLikeStr in value_dict.items():
-        key_list.append(key)
-        value_list.append(str_to_list(listLikeStr))
+    
+    keys = list(value_dict.keys())
+    values = [str_to_list(value) for value in value_dict.values()]
 
-    for matched_values in zip(*value_list):
-        temp.append({key: value for key, value, in zip(key_list, matched_values)})
+    if not all(len(v) == len(next(iter(values))) for v in values):
+        raise ValueError("All lists in value_dict must have the same length")
 
-    return temp
+    return [dict(zip(keys, combination)) for combination in zip(*values)]
 
 
 def make_uniqueMarker(cellMarkers: list) -> list:
@@ -65,6 +75,29 @@ def make_uniqueMarker(cellMarkers: list) -> list:
     cellMarkers = list({tuple(sorted(marker.items())) for marker in cellMarkers})
     return [dict(marker) for marker in cellMarkers]
 
+def select_items(record, item_keys):
+    return {key: record[key] for key in item_keys if key in record}
+
+def load_data_files(data_folder: str, files: list) -> list:
+    """
+    Load data from a list of files in a specified folder.
+    Args:
+        data_folder (str): The path to the folder containing the data files.
+        files (list): A list of filenames to be loaded from the data folder.
+    Returns:
+        list[dict]: A list of dictionaries containing the data from the files.
+    Raises:
+        FileNotFoundError: If any of the specified files do not exist in the data folder.
+    """
+    data = []
+    for file in files:
+        file_path = os.path.join(data_folder, file)
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f"Missing file: {file_path}")
+        with open(file_path, mode="r") as f:
+            reader = csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE)
+            data.extend(reader)
+    return data
 
 def load_annotations(data_folder):
     """Converting data into expected JSON format
@@ -75,54 +108,70 @@ def load_annotations(data_folder):
     Return:
         the yield JSON data
     """
+    # load data
+    data = load_data_files(data_folder, FILES)
 
-    # convert and check if the data file exist
-    infile_all_cell = os.path.join(data_folder, "all_cell_markers.txt")
-    infile_single_cell = os.path.join(data_folder, "Single_cell_markers.txt")
-
-    assert os.path.exists(infile_all_cell)
-    assert os.path.exists(infile_single_cell)
-
-    # import data and store them in a list
-    data = []
-    with open(infile_all_cell, mode="r") as file:
-        reader = csv.DictReader(file, delimiter="\t", quoting=csv.QUOTE_NONE)
-        data += [row for row in reader]
-    with open(infile_single_cell, mode="r") as file:
-        reader = csv.DictReader(file, delimiter="\t", quoting=csv.QUOTE_NONE)
-        data += [row for row in reader]
-
-    results = dict()
-
+    results = {}
     for record in data:
-        # converting all the key to standard format
-        process_key = lambda k: k.replace(" ", "_").lower()
-        record = dict_convert(record, keyfn=process_key)
 
-        if record["geneid"] == "NA":
+        # converting all the key to standard format
+        record = dict_convert(record, keyfn=lambda k: k.replace(" ", "_").lower())
+
+        # ignore geneID that is missing
+        if record[GENE_ID].casefold() == "na":
             continue
 
         # zip these elements together to get multiple copies
-        ZIP_COLUMNS = ["cellmarker", "genesymbol", "geneid"]
+        try: 
+            for gene_expression in pairUp_seq_info(select_items(record, ZIP_COLUMNS)):
+                _id = gene_expression["geneid"]
+                if _id.casefold() == "na":
+                    continue
+                results.setdefault(_id, {})
+                gene_expression_dict = results[_id]
+                gene_expression_dict['symbol'] = gene_expression['genesymbol']
+                if record['markerresource'].casefold() != 'company':
+                    gene_expression_dict.setdefault('geneRelatedCells', []).append(
+                        dict_sweep({
+                            "CellOntologyID": record['cellontologyid'],
+                            "cellName": record['cellname'],
+                            "cellType": record['celltype'],
+                            "cancerType": record['cancertype'],
+                            "tissueType": record['tissuetype'],
+                            "UberonOntologyID": record['uberonontologyid'],
+                            "speciesType": record['speciestype'],
+                            "markerResource": record['markerresource'],
+                            "PMID": record['pmid']
+                        })
+                    )
+                else:
+                    gene_expression_dict.setdefault('geneRelatedCells', []).append(
+                        dict_sweep({
+                            "CellOntologyID": record['cellontologyid'],
+                            "cellName": record['cellname'],
+                            "cellType": record['celltype'],
+                            "cancerType": record['cancertype'],
+                            "tissueType": record['tissuetype'],
+                            "UberonOntologyID": record['uberonontologyid'],
+                            "speciesType": record['speciestype'],
+                            "markerResource": record['markerresource'],
+                            "Company": record['company']
+                        })
+                    )
+        except ValueError as e:
+            print('problematic record')
+            print(record)
 
-        for gene_expression in pairUp_seq_info(
-            {key: record[key] for key in record if key in ZIP_COLUMNS}
-        ):
-            _id = gene_expression["geneid"]
-            if _id.casefold() == "na":
-                continue
-            results.setdefault(_id, []).append(
-                {k: v for k, v in gene_expression.items() if k != "geneid"}
-            )
-
-    results_unqiueMarker = {
-        geneid: make_uniqueMarker(markers) for geneid, markers in results.items()
-    }
-
-    for _id, docs in results_unqiueMarker.items():
-        doc = {"_id": _id, "cellMarker": docs}
-        yield doc
-
+            
+            # .append(
+            #     {k: v for k, v in gene_expression.items() if k != "geneid"}
+            # )
+    for _id, related_info in results.items():
+        yield {
+            "_id": _id,
+            "symbol": related_info['symbol'],
+            "geneRelatedCells": make_uniqueMarker(related_info['geneRelatedCells'])
+        }
 
 if __name__ == "__main__":
     import doctest
@@ -131,7 +180,8 @@ if __name__ == "__main__":
     x = load_annotations("data")
 
     y = [i for i in x]
-    breakpoint()
-    print(y)
+    # breakpoint()
+    # print(y)
 
     # print(str_to_list("Intestinal Alkaline Phosphatase"))
+
