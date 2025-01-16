@@ -161,6 +161,7 @@ def load_annotations(data_folder):
         except ValueError as e:
             print('problematic record')
             print(record)
+            continue
 
             
             # .append(
@@ -180,7 +181,7 @@ if __name__ == "__main__":
     x = load_annotations("data")
 
     y = [i for i in x]
-    # breakpoint()
+    breakpoint()
     # print(y)
 
     # print(str_to_list("Intestinal Alkaline Phosphatase"))
