@@ -6,7 +6,6 @@ import os
 import re
 
 import numpy as np
-import pandas
 import requests
 from biothings import config
 from biothings.utils.dataload import dict_convert, dict_sweep
@@ -42,7 +41,12 @@ def get_gene_symbol(gene_ids: str) -> str:
     """
     headers = {"content-type": "application/x-www-form-urlencoded"}
     params = f"ids={gene_ids}&fields=symbol"
-    res = requests.post("http://mygene.info/v3/gene", data=params, headers=headers)
+
+    try:
+        res = requests.post("http://mygene.info/v3/gene", data=params, headers=headers)
+        res.raise_for_status()
+    except requests.RequestException as e:
+        return {}
 
     return json.loads(res.content.decode("utf-8"))
 
@@ -90,7 +94,6 @@ def pairUp_seq_info(value_dict: dict) -> list:
     values = [str_to_list(value) for value in value_dict.values()]
 
     if not all(len(v) == len(next(iter(values))) for v in values):
-        print("..................")
         gene_ids = ", ".join(
             [
                 gene_id
@@ -109,12 +112,28 @@ def pairUp_seq_info(value_dict: dict) -> list:
 
 
 def make_uniqueMarker(cellMarkers: list) -> list:
+    """Make unique markers from a list of cell markers
 
+    Args:
+        cellMarkers (list): list of cell markers
+
+    Returns:
+        list: list of unique cell markers
+    """
     cellMarkers = list({tuple(sorted(marker.items())) for marker in cellMarkers})
     return [dict(marker) for marker in cellMarkers]
 
 
 def select_items(record, item_keys):
+    """Select specific items from a record
+
+    Args:
+        record (dict): the record to select items from
+        item_keys (list): the keys of the items to select
+
+    Returns:
+        dict: the selected items
+    """
     return {key: record[key] for key in item_keys if key in record}
 
 
@@ -124,8 +143,10 @@ def load_data_files(data_folder: str, files: list) -> list:
     Args:
         data_folder (str): The path to the folder containing the data files.
         files (list): A list of filenames to be loaded from the data folder.
+
     Returns:
         list[dict]: A list of dictionaries containing the data from the files.
+
     Raises:
         FileNotFoundError: If any of the specified files do not exist in the data folder.
     """
@@ -154,7 +175,6 @@ def load_annotations(data_folder):
 
     results = {}
     for record in data:
-
         # converting all the key to standard format
         record = dict_convert(record, keyfn=lambda k: k.replace(" ", "_").lower())
 
@@ -201,6 +221,7 @@ def load_annotations(data_folder):
                         }
                     )
                 )
+    # return each gene_id with yield and remove duplicate from the dictionary
     for _id, related_info in results.items():
         yield {
             "_id": _id,
@@ -210,13 +231,9 @@ def load_annotations(data_folder):
 
 
 if __name__ == "__main__":
-    # import doctest
+    import doctest
 
-    # doctest.testmod()
+    doctest.testmod()
     x = load_annotations("data")
-
     y = [i for i in x]
     breakpoint()
-    # print(y)
-
-    # print(str_to_list("Intestinal Alkaline Phosphatase"))
