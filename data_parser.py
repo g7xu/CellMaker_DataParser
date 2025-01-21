@@ -6,10 +6,11 @@ import os
 import re
 
 import requests
-from biothings import config
+
+# from biothings import config
 from biothings.utils.dataload import dict_convert, dict_sweep
 
-logging = config.logger
+# logging = config.logger
 GENE_ID = "geneid"
 GENE_SYMBOL = "genesymbol"
 MARKER_RESOURCE = "markerresource"
@@ -75,40 +76,40 @@ def str_to_list(listLikeStr: str) -> list:
     return [val.strip() for val in parsed_str_list]
 
 
-def pairUp_seq_info(value_dict: dict) -> list:
-    """Pair up all the elements in each value of the dictionary
+# def pairUp_seq_info(value_dict: dict) -> list:
+#     """Pair up all the elements in each value of the dictionary
 
-    Args:
-        value_dict (dict): values that need to be paired up
+#     Args:
+#         value_dict (dict): values that need to be paired up
 
-    Returns:
-        list[dict]: A list of dictionaries where each dict contains a pairing
-        of keys with corresponding elements from the value lists.
-    >>> pairUp_seq_info({"a": "1, 2", "b": "3, 4"})
-    [{'a': '1', 'b': '3'}, {'a': '2', 'b': '4'}]
-    >>> pairUp_seq_info({"a": '1'})
-    [{'a': '1'}]
-    """
-    keys = list(value_dict.keys())
-    values = [str_to_list(value) for value in value_dict.values()]
+#     Returns:
+#         list[dict]: A list of dictionaries where each dict contains a pairing
+#         of keys with corresponding elements from the value lists.
+#     >>> pairUp_seq_info({"a": "1, 2", "b": "3, 4"})
+#     [{'a': '1', 'b': '3'}, {'a': '2', 'b': '4'}]
+#     >>> pairUp_seq_info({"a": '1'})
+#     [{'a': '1'}]
+#     """
+#     keys = list(value_dict.keys())
+#     values = [str_to_list(value) for value in value_dict.values()]
 
-    # when there is mismatch gene and its symbol, we will get gene symbol form my.gene API
-    if not all(len(v) == len(next(iter(values))) for v in values):
-        gene_ids = ", ".join(
-            [
-                gene_id
-                for gene_id in str_to_list(value_dict["geneid"])
-                if gene_id.casefold() != "na" and gene_id != ""
-            ]
-        )
-        symbols = get_gene_symbol(gene_ids)
+#     # when there is mismatch gene and its symbol, we will get gene symbol form my.gene API
+#     if not all(len(v) == len(next(iter(values))) for v in values):
+#         gene_ids = ", ".join(
+#             [
+#                 gene_id
+#                 for gene_id in str_to_list(value_dict["geneid"])
+#                 if gene_id.casefold() != "na" and gene_id != ""
+#             ]
+#         )
+#         symbols = get_gene_symbol(gene_ids)
 
-        return [
-            {"geneid": gene_info["_id"], "genesymbol": gene_info["symbol"]}
-            for gene_info in symbols
-        ]
+#         return [
+#             {"geneid": gene_info["_id"], "genesymbol": gene_info["symbol"]}
+#             for gene_info in symbols
+#         ]
 
-    return [dict(zip(keys, combination)) for combination in zip(*values)]
+#     return [dict(zip(keys, combination)) for combination in zip(*values)]
 
 
 def make_uniqueMarker(cellMarkers: list) -> list:
@@ -182,13 +183,12 @@ def load_cellMarkers(data_folder):
         if record[GENE_ID].casefold() == "na" or record[GENE_ID].casefold() == "":
             continue
         # zip these elements together to get multiple copies
-        for gene_expression in pairUp_seq_info(select_items(record, ZIP_COLUMNS)):
-            _id = gene_expression["geneid"]
+        for gene_id in str_to_list(record[GENE_ID]):
+            _id = gene_id
             if _id.casefold() == "na" or _id.casefold() == "":
                 continue
             results.setdefault(_id, {})
-            gene_expression_dict = results[_id]
-            gene_expression_dict["symbol"] = gene_expression["genesymbol"]
+            gene_id_dict = results[_id]
 
             # identify source key
             if record["markerresource"].casefold() != "company":
@@ -198,7 +198,7 @@ def load_cellMarkers(data_folder):
                 resource_key = "company"
                 record_resource_key = "company"
 
-            gene_expression_dict.setdefault("cellmarker", []).append(
+            gene_id_dict.setdefault("cellmarker", []).append(
                 dict_sweep(
                     {
                         "cellontology": record["cellontologyid"],
@@ -222,10 +222,10 @@ def load_cellMarkers(data_folder):
         }
 
 
-# if __name__ == "__main__":
-#     import doctest
+if __name__ == "__main__":
+    import doctest
 
-#     doctest.testmod()
-#     x = load_annotations("data")
-#     y = [i for i in x]
-#     breakpoint()
+    doctest.testmod()
+    x = load_cellMarkers("data")
+    y = [i for i in x]
+    breakpoint()
