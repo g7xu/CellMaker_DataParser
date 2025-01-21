@@ -202,7 +202,7 @@ def load_cellMarkers(data_folder):
                 dict_sweep(
                     {
                         "cellontology": record["cellontologyid"],
-                        "cellName": record["cellname"],
+                        "cellname": record["cellname"],
                         "celltype": record["celltype"],
                         "cancertype": record["cancertype"],
                         "tissue": record["tissuetype"],
