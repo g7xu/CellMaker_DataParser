@@ -208,7 +208,7 @@ def load_cellMarkers(data_folder):
                         "tissue": record["tissuetype"],
                         "uberon": record["uberonontologyid"],
                         "species": record["speciestype"],
-                        "mark_resource": record["markerresource"],
+                        "marker_resource": record["markerresource"],
                         f"{resource_key}": record[f"{record_resource_key}"],
                     }
                 )
