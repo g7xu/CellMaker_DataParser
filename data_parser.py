@@ -94,11 +94,18 @@ def pairUp_seq_info(value_dict: dict) -> list:
 
     if not all(len(v) == len(next(iter(values))) for v in values):
         gene_ids = ", ".join(
-            [gene_id for gene_id in str_to_list(value_dict["geneid"]) if gene_id.casefold() != "na" and gene_id != ""]
+            [
+                gene_id
+                for gene_id in str_to_list(value_dict["geneid"])
+                if gene_id.casefold() != "na" and gene_id != ""
+            ]
         )
         symbols = get_gene_symbol(gene_ids)
 
-        return [{"geneid": gene_info["_id"], "genesymbol": gene_info["symbol"]} for gene_info in symbols]
+        return [
+            {"geneid": gene_info["_id"], "genesymbol": gene_info["symbol"]}
+            for gene_info in symbols
+        ]
 
     return [dict(zip(keys, combination)) for combination in zip(*values)]
 
