@@ -218,7 +218,7 @@ def load_cellMarkers(data_folder):
     for _id, related_info in results.items():
         yield {
             "_id": _id,
-            "geneRelatedCells": make_uniqueMarker(related_info["geneRelatedCells"]),
+            "cellmarker": make_uniqueMarker(related_info["cellmarker"]),
         }
 
 
