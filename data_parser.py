@@ -192,23 +192,23 @@ def load_cellMarkers(data_folder):
 
             # identify source key
             if record["markerresource"].casefold() != "company":
-                resource_key = "PMID"
+                resource_key = "pmid"
                 record_resource_key = "pmid"
             else:
-                resource_key = "Company"
+                resource_key = "company"
                 record_resource_key = "company"
 
-            gene_expression_dict.setdefault("geneRelatedCells", []).append(
+            gene_expression_dict.setdefault("cellmarker", []).append(
                 dict_sweep(
                     {
-                        "CellOntologyID": record["cellontologyid"],
+                        "cellontology": record["cellontologyid"],
                         "cellName": record["cellname"],
-                        "cellType": record["celltype"],
-                        "cancerType": record["cancertype"],
-                        "tissueType": record["tissuetype"],
-                        "UberonOntologyID": record["uberonontologyid"],
-                        "speciesType": record["speciestype"],
-                        "markerResource": record["markerresource"],
+                        "celltype": record["celltype"],
+                        "cancertype": record["cancertype"],
+                        "tissue": record["tissuetype"],
+                        "uberon": record["uberonontologyid"],
+                        "species": record["speciestype"],
+                        "mark_resource": record["markerresource"],
                         f"{resource_key}": record[f"{record_resource_key}"],
                     }
                 )
@@ -218,7 +218,6 @@ def load_cellMarkers(data_folder):
     for _id, related_info in results.items():
         yield {
             "_id": _id,
-            "symbol": related_info["symbol"],
             "geneRelatedCells": make_uniqueMarker(related_info["geneRelatedCells"]),
         }
 
