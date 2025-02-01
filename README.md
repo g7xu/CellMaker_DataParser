@@ -134,6 +134,9 @@ We care about the relationships betweens Gene ID and Cell information in each ce
 ### Missingness of company value
 91% of the value in the `company` column is missing, but it is missing by design. There are in total 4 different kinds of values in `markerResource` column which are "Experiment", "Review", "Single-cell sequencing", and "Company". The `company` column is not missing when the value in `markerResource` column is "company" 
 
+### Abnormal GeneID
+Some of the geneID is in forms of text. For example, some of the geneID is `ALDH family` and some of the geneID is `IgG family`. This is a special name defined by the Researcher of the data source to categorize the sets of geneIDs.
+
 <!-- Export JSON file outline -->
 ## Export JSON file outline
 This is the template for the output data field. The structure within the cellMarkers field can follow two different formats, depending on the value of the markerResource attribute:
