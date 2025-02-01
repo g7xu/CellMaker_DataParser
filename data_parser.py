@@ -163,8 +163,8 @@ def load_cellMarkers(data_folder):
         # converting all the key to standard format
         record = dict_convert(record, keyfn=lambda k: k.replace(" ", "_").lower())
 
-        # ignore geneID that is missing
-        if record[GENE_ID].casefold() == "na" or record[GENE_ID].casefold() == "":
+        # ignore geneID that is missing or contains non-numeric value
+        if record[GENE_ID].casefold() == "na" or not record[GENE_ID].isnumeric():
             continue
 
         # zip these elements together to get multiple copies
