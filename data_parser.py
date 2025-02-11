@@ -221,17 +221,17 @@ def load_cellMarkers(data_folder):
         }
 
 
-# if __name__ == "__main__":
-#     import doctest
+if __name__ == "__main__":
+    import doctest
 
-#     doctest.testmod()
-#     x = load_cellMarkers("data")
-#     y = [i for i in x]
+    doctest.testmod()
+    x = load_cellMarkers("data")
+    y = [i for i in x]
 
-#     remember = []
-#     # check if all the geneid is number
-#     for i in y:
-#         if not i["_id"].isnumeric():
-#             remember.append(i["_id"])
+    remember = []
+    # check if all the geneid is number
+    for i in y:
+        if not i["_id"].isnumeric():
+            remember.append(i["_id"])
 
-#     breakpoint()
+    breakpoint()

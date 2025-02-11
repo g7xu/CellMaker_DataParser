@@ -2,7 +2,23 @@ def get_customized_mapping(cls):
     mapping = {
         "cellmarker": {
             "properties": {
+                "cancertype": {
+                    "normalizer": "keyword_lowercase_normalizer",
+                    "type": "keyword",
+                },
+                "cellname": {
+                    "normalizer": "keyword_lowercase_normalizer",
+                    "type": "keyword",
+                },
                 "cellontology": {
+                    "normalizer": "keyword_lowercase_normalizer",
+                    "type": "keyword",
+                },
+                "celltype": {
+                    "normalizer": "keyword_lowercase_normalizer",
+                    "type": "keyword",
+                },
+                "marker_resource": {
                     "normalizer": "keyword_lowercase_normalizer",
                     "type": "keyword",
                 },
@@ -14,6 +30,10 @@ def get_customized_mapping(cls):
                     "normalizer": "keyword_lowercase_normalizer",
                     "type": "keyword",
                 },
+                "tissue": {
+                    "normalizer": "keyword_lowercase_normalizer",
+                    "type": "keyword",
+                },
                 "uberon": {
                     "normalizer": "keyword_lowercase_normalizer",
                     "type": "keyword",
@@ -22,11 +42,6 @@ def get_customized_mapping(cls):
                     "normalizer": "keyword_lowercase_normalizer",
                     "type": "keyword",
                 },
-                "cancertype": {"type": "text"},
-                "marker_resource": {"type": "keyword"},
-                "tissue": {"type": "text"},
-                "cellname": {"type": "text"},
-                "celltype": {"type": "keyword"},
             }
         }
     }
