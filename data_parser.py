@@ -191,6 +191,11 @@ def load_cellMarkers(data_folder):
             if record["tissuetype"].casefold() == "undefined":
                 record["tissuetype"] = ""
 
+            # check if any value in the dict is na, if so, make it empty
+            for key, value in record.items():
+                if value.casefold() == "na":
+                    record[key] = ""
+
             gene_id_dict.setdefault("cellmarker", []).append(
                 dict_sweep(
                     {
@@ -227,11 +232,5 @@ if __name__ == "__main__":
     doctest.testmod()
     x = load_cellMarkers("data")
     y = [i for i in x]
-
-    remember = []
-    # check if all the geneid is number
-    for i in y:
-        if not i["_id"].isnumeric():
-            remember.append(i["_id"])
 
     breakpoint()
