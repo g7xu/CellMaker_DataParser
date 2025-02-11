@@ -1,0 +1,681 @@
+Proximal tubular cell
+Ito cell (hepatic stellate cell)
+Trophoblast cell
+Primordial germ cell
+Epithelial cell
+Cytotrophoblast
+Periosteum-derived progenitor cell
+Amnion epithelial cell
+Primitive streak cell
+Stromal vascular fraction cell
+Bulge stem cell
+Semilunar valve cell
+Villous stromal cell
+Kupffer cell
+Adipose-derived stromal cell
+Oligodendrocyte
+Mesenchymal stem cell
+Cartilage progenitor cell
+Osteocyte
+Osteoclast
+Bipolar cell
+Muller cell
+Monocyte
+Natural killer cell
+Cancer stem cell
+Endometrial stem cell
+Dental pulp stem cell
+B cell
+Adipose-derived stem cell
+Preadipocyte progenitor cell
+Regulatory T (Treg) cell
+Nucleus pulposus cell
+Urine-derived stem cell
+Fibroblast
+Immune cell
+Endothelial cell
+T cell
+Thymocyte
+Dendritic cell
+Neutrophil
+Lymphocyte
+Endothelial progenitor cell
+Tumor endothelial cell
+Premeiotic germ cell
+Gonocyte
+Spermatogonial stem cell
+Sertoli cell
+Mesenchymal stromal cell
+Pancreatic stem cell
+Myeloid-derived suppressor cell
+CD4+ T cell
+Anterior foregut endoderm cell
+Endoderm progenitor cell
+Circulating fetal cell
+Neural progenitor cell
+Astroglial progenitor cell
+Paneth cell
+Hepatoblast
+Mesenchymal cell
+Hematopoietic cell
+CD8+ T cell
+Periodontal stem cell
+Natural regulatory T (Treg) cell
+FOXP3+ natural regulatory T (Treg) cell
+Beige adipogenic precursor cell
+Brown adipogenic precursor cell
+Platelet
+Leukocyte
+Cytotoxic T cell
+Natural killer T (NKT) cell
+T helper cell
+Memory T cell
+T helper1 (Th1) cell
+T helper2 (Th2) cell
+T helper17 (Th17) cell
+Plasmacytoid dendritic cell
+Lymphatic endothelial cell
+Endocrine cell
+Responder T cell
+Cancer stem-like cell
+Macrophage
+Naive B cell
+Class-switched memory B cell
+Non-switched memory B cell
+Double-negative B cell
+Transitional B cell
+Plasmablast
+Oral keratinocyte stem cell
+Myogenic endothelial cell
+Pericyte
+Adventitial cell
+White blood cell
+Pigment epithelial cell
+Amacrine cell
+Immature transitional B cell
+Memory B cell
+Non-switched B cell
+Switched memory B cell
+Effector CD4+ memory T (Tem) cell
+Esophageal mucosal cell
+Hematopoietic stem cell
+Hematopoietic progenitor cell
+Neural crest stem cell
+Myeloid stem cell
+Germinal center B cell
+Pluripotent stem cell
+Myeloid cell
+Granulocyte
+Classical monocyte
+Intermediate monocyte
+Non-classical monocyte
+Suppressive monocyte
+Monocyte derived dendritic cell
+CD16+ dendritic cell
+Immature myeloid cell
+Eosinophil
+Unrestricted somatic stem cell
+Double-negative memory B cell
+Plasma cell
+Granulosa cell
+Theca interna cell
+Beta cell
+Alveolar epithelial progenitor cell
+Limbal stem cell
+Liver progenitor cell
+Myoepithelial cell
+Oviduct-derived stem cell
+Cancer cell
+Limbal mesenchymal cell
+Red blood cell (erythrocyte)
+Adipose multilineage-differentiating stress-enduring cell
+Regulatory B cell
+Neural stem cell
+Cardiac progenitor cell
+Pluripotent very small embryonic-like cell
+Ovarian germ stem cell
+Germ cell
+Germline stem cell
+Circulating stem like cell
+Circulating progenitor cell
+Prostate stem cell
+M2 macrophage
+Circulating precursor cell
+Endothelial precursor cell
+Cardiomyocyte progenitor cell
+Smooth muscle cell
+Urothelium cell
+Amniotic fluid stem cell
+Testis somatic cell
+Photoreceptor cell
+Neural crest cell
+Placenta cell
+Myeloid dendritic cell
+B1 cell
+Follicular helper (Tfh) T cell
+Mesenchymal progenitor cell
+Basal cell
+Hepatocyte
+Gastric stem cell
+Side-population cell
+Endometrial progenitor cell
+Retinal progenitor cell
+Vaginal cell
+Muscle satellite cell
+Inflammatory cell
+Spermatogonium
+Vascular stem cell
+Vascular progenitor cell
+Keratinocyte progenitor cell
+Adipose progenitor cell
+Intestinal stem cell
+Endometrial stromal stem cell
+Induced regulatory T (Treg) cell
+Corneal limbal stem cell
+Epidermal transit amplifying cell
+Submandibular gland stem cell
+Serous acinar cell
+Mucous acinar cell
+Lymphoid cell
+Multipotent progenitor cell
+EBV+ B lymphoma cell
+Liver stem cell
+Megakaryocyte progenitor cell
+Blast cell
+Megakaryocyte
+Endocrine progenitor cell
+Early hematopoietic cell
+Podocyte
+Glomerular epithelial cell
+Stromal stem cell
+Dermal papilla cell
+Schwann cell
+Ciliated cell
+Multipotent stem cell
+Muller glia precursor cell
+Null cell
+Central nervous system stem cell
+Osteogenic precursor-like cell
+CD4-CD28+ T cell
+CD4-CD28- T cell
+Luteinizing granulosa cell
+Suppressor T cell
+Decidual cell
+Activated CD4+ T cell
+Hair follicle cell
+Mature endothelial cell
+Immature endothelial cell
+Cytokine induced killer cell
+CD14+ endothelial progenitor cell
+Dedifferentiation adipocyte
+Bile duct cell
+Follicular dendritic cell
+Basophil
+Muscle-derived cell
+Progenitor-like angiogenesis-promoting cell
+Dopaminergic neuron
+Neuron
+IL-17Ralpha T cell
+Corneal endothelial cell
+Corneal epithelial progenitor cell
+Colonic stem cell
+Infiltrated mononuclear cell
+Naive T cell
+Central memory T cell
+Effector memory T cell
+Effector T cell
+Cortical thymus epithelial cell
+Medullary thymus epithelial cell
+Cardiomyocyte
+M1 macrophage
+Tumor-propagating cell
+Keratinocyte
+Flk1+ mesodermal cell
+Colony-forming cell
+Hepatic progenitor-like cell
+Angiogenic T cell
+Multipotent postnatal stem cell
+Multipotent postnatal progenitor cell
+Oxyntic stem cell
+Oxyntic progenitor cell
+Pancreatic progenitor cell
+Pancreatic endoderm cell
+Epithelial stem cell
+Stromal cell
+Vascular smooth muscle cell
+Malignant mesothelioma cell
+Mesothelioma cell
+Buccal epithelial stem cell
+Stem cell
+Microglial cell
+Embryonic stem cell
+Luminal cell
+PDX1+ pancreatic progenitor cell
+Progenitor cell
+Abnormal plasma cell
+Astrocyte
+Cholinergic neuron
+Erythroid precursor
+Small intestinal stem cell
+Merkel cell
+Interstitial cell
+Glutamatergic neuron
+Preadipocyte
+Multipotent mesenchymal stroma cell
+CD14+CD16+ monocyte
+CD14++CD16- monocyte
+Type II pneumocyte
+Clara cell
+Follicular T cell
+Mesangial cell
+Hematopoietic precursor cell
+Bone marrow stem cell
+Myometrial stem cell
+Osteoblast
+Zymogenic chief cell
+Corneal epithelial stem cell
+Cardiovascular progenitor cell
+Naive CD4+ T cell
+Thymic emigrant cell
+Definitive zone cell
+Chromaffin cell
+Epidermal stem cell
+Erythroblast
+Large granular lymphocyte
+Erythroid cell
+T1 (Transitional) B cell
+T2 (Transitional) B cell
+Limbal epithelial stem cell
+Leydig cell
+Peritubular myoid cell
+Dendritic cell progenitor
+Periodontal ligament stem cell
+Germinal stem cell
+Dental pulp cell
+Migrating cancer stem cell
+Epithelial progenitor cell
+Luminal progenitor
+Basal progenitor cell
+Intestinal epithelial stem cell
+Atypical memory B cell
+Foxp3+IL-17+ T cell
+Pancreatic ductal stem cell
+Bone marrow stromal cell
+Early transit-amplifying prostate epithelial cell
+Late transit-amplifying prostate epithelial cell
+Thecal cell
+Langerhans cell
+Glial cell
+Lymphoid stem cell
+Neuroendocrine cell
+Epithelial hair follicle stem cell
+Retinal ganglion cell
+Somatic stem cell
+Lymphoid-primed multipotent progenitor
+Mast cell progenitor
+CD4+ memory T cell
+Acinar cell
+Alpha cell
+Delta cell
+Ovarian somatic cell
+Oocyte
+Oligodendrocyte progenitor cell
+Mesothelial cell
+Purkinje cell
+Chondrocyte
+Activated B cell
+Myofibroblast
+Luminal epithelial cell
+Basal epithelial cell
+Type I pneumocyte
+Lung epithelial cell
+Mast cell
+Blastema cell
+Type II taste bud cell
+Type III taste bud cell
+White fat cell
+Meniscus-derived stem cell
+Meniscus-derived progenitor cell
+Alveolar macrophage
+CD8a+ dendritic cell
+CD4+ T follicular helper cell
+Radial glial cell
+Bipotent glial progenitor cell
+Classical macrophage
+Alternative macrophage
+Rod photoreceptor precursor cell
+Peripheral monocyte
+Rhombic lip cell
+Oesophageal progenitor cell
+Oesophageal stem cell
+Prostate progenitor cell
+Enteroendocrine cell
+Endometrial precursor cell
+Marginal zone B cell
+Adipogenic progenitor cell
+Activated T cell
+Tympanic border cell
+Oogonial stem cell
+Auditory progenitor cell
+Hair cell
+Sinoatrial node cell
+Oligodendrocyte precursor cell
+Pancreatic ductal cell
+Quiescent satellite cell
+Mural cell
+Duct cell
+Osteoclast precursor cell
+Proangiogenic cell
+Testicular stem cell
+Skeletal muscle stem cell
+Heart muscle stem cell
+Gamma delta T cell
+Immature sertoli cell
+Mature sertoli cell
+Enterochromaffin cell
+NG2-glia cell
+Chondro progenitor cell
+Incisor epithelial stem cell
+Outer Pillar Cell
+Undifferentiated type A spermatogonium
+CD3+ T cell
+Brown fat cell
+Beige fat cell
+Chondrocyte-derived bone cell
+Thymus-derived regulatory T (Treg) cell
+Lacrimal gland germ epithelial cell
+Atrial cell
+Ventricular compact cell
+Ventricular trabecular cell
+Oval cell
+Hemangioblast
+Erythroid progenitor
+Quiescent small intestinal stem cell
+Polymorphonuclear neutrophil
+Neuron-restricted precursor
+Glial-restricted precursor
+Dermal fibroblast
+Ventricular cardiomyocyte
+Airway dendritic cell
+Naive thymic NKT17 cell
+Ovarian surface epithelial cell
+Stomach stem cell
+Goblet cell
+Stem leydig cell
+Mature naive B cell
+IgA lamina propria lymphocyte
+Taste bud cell
+Vascular cell
+Leptomeningeal cell
+Ependymal cell
+Olfactory ensheathing glia
+Glomus cell
+Olfactory sensory neuron
+Vomeronasal sensory neuron
+Lipofibroblast
+Neuroblast
+Skin stem cell
+Fat cell (adipocyte)
+Astrocyte precursor cell
+Immature neuron
+Osteogenic cell
+Chondrogenic cell
+Adipogenic cell
+Endogenic cell
+Hematopoetic cell
+Myogenic cell
+Myeloid progenitor cell
+Multiple pluripotent progenitor cell
+Nephron epithelial cell
+Pre-haematopoietic stem cell
+CD4+ T helper cell
+CD4+CD25+ regulatory T cell
+CD8+ cytotoxic T cell
+Common lymphoid progenitor
+Common myeloid progenitor
+Conventional dendritic cell
+Definitive endoderm cell
+Mesoderm cell
+Ectoderm cell
+Effector regulatory T (Treg) cell
+Induced pluripotent stem cell
+Endothelial stem cell
+Exhausted T cell
+Follicular B cell
+GABAergic neuron
+Granulocyte-monocyte progenitor
+IgG memory B cell
+Intermediate progenitor cell
+Megakaryocyte erythroid cell
+Megakaryocyte-erythroid progenitor
+Mesodermal embryonic stem cell
+Myeloblast
+Naive regulatory T (Treg) cell
+Natural memory B cell
+Neural tube cell
+Neuroepithelial cell
+Primitive endoderm cell
+Proerythroblast
+Pyramidal cell
+Serotonergic neuron
+Specialist antigen presenting cell
+T helper9 (Th9) cell
+CD8+ cytotoxic T killer cell
+Myeloid conventional dendritic cell
+CD4+ regulatory T cell
+CD8+ regulatory T cell
+Colorectal stem cell
+Airway secretory cell
+Pancreatic polypeptide cell
+Neuronal progenitor cell
+Trophoblast stem cell
+Idiopathic pulmonary fibrosis cell
+Matrix fibroblast
+Muscle cell
+Neural cell
+pro-Natural killer cell (pro-NK cell)
+Trophectoderm cell
+Epiblast cell
+Interneuron
+Naive CD8+ T cell
+Effector CD8+ memory T (Tem) cell
+Mucosal-associated invariant T cell
+Exhausted CD8+ T cell
+Exhausted CD4+ T cell
+CD4+ cytotoxic T cell
+CXCR6+ T cell
+Hormone sensing progenitor
+Hormone sensing differentiated cell
+Differentiated alveolar cell
+Alveolar progenitor cell
+Procr+ basal cell
+Early enterocyte precursor cell
+Transit amplifying (TA) cell
+Late enterocyte precursor cell
+Enterocyte
+Enteroendocrine precursor cell
+Brush cell (Tuft cell)
+Myotube
+Myoblast
+Liver bud hepatic cell
+Lymphoblast
+Secretory cell
+Ionocyte cell
+Cycling basal cell
+FOXN4+ cell
+SLC16A7+ cell
+Krt4/13+ cell
+Axin2+ cell
+Pdgfrapha+ cell
+Axin2-Palpha+ cell
+Wnt2+ cell
+Lgr5+ cell
+Lgr6+ cell
+Vascular endothelial cell
+Proximal tubule cell
+Distal convoluted tubule cell
+Collecting duct principal cell
+Collecting duct intercalated cell
+Collecting duct transient cell
+Cortical cell
+Medullary cell
+Ductal cell
+PP cell
+Early neuroblast
+Ventral otocyst
+Late neuroblast
+Dorsal otocyst
+O cell
+Chandelier cell
+Basket cell
+Long-projecting GABAergic cell
+Martinotti cell
+Interneuron-selective cell
+CCK basket cell
+Quiescent neural stem cell
+Activated neural stem cell
+Late activated neural stem cell
+Type I spiral ganglion neuron
+Type II spiral ganglion neuron
+Precursor cell
+Immature olfactory sensory neuron
+Mature olfactory sensory neuron
+Ciliated epithelial cell
+Secretory progenitor cell
+FGFR1LowNME5- epithelial cell
+FGFR1HighNME5- epithelial cell
+HES1High progenitor cell
+Parietal progenitor cell
+Pit progenitor cell
+Pit cell
+Tuft progenitor cell
+PROCR+ progenitor cell
+Enterocyte progenitor cell
+LGR5+ stem cell
+DCLK1+ progenitor cell
+MKI67+ progenitor cell
+PROM1High progenitor cell
+PROM1Low progenitor cell
+Goblet progenitor cell
+Mitotic fetal germ cell
+Retinoid acid signaling-responsive fetal germ cell
+Meiotic prophase fetal germ cell
+Oogenesis phase fetal germ cell
+Migration phase fetal germ cell
+Gonadal mitotic phase fetal germ cell
+Mitotic arrest phase fetal germ cell
+Leydig precursor cell
+Gonadal endothelial cell
+Extravillous trophoblast cell
+Villous cytotrophoblast
+Syncytiotrophoblast
+Luminal progenitor cell
+Endocardial cell
+Arterial cell
+Venous cell
+Lymphoid-primed multipotent progenitor cell
+Multilymphoid progenitor cell
+Stage I neutrophil
+Stage II neutrophil
+CD141+CLEC9A+ dendritic cell
+CD1C+_A dendritic cell
+CD1C+_B dendritic cell
+CD1C-CD141- dendritic cell
+AXL+SIGLEC6+ dendritic cell
+Blood progenitor cell
+Activated CD8+ T cell
+Inflammatory monocyte
+Ly6c+ monocyte
+Endoderm cell
+Extraembryonic cell
+Visceral endoderm cell
+Extraembryonic ectoderm cell
+Mesodermal progenitor cell
+Primitive erythroid cell
+Allantois cell
+Pharyngeal mesoderm cell
+Immature dendritic cell
+Ureteric bud cell
+Primitive vesicle cell
+Long-term hematopoietic stem cell
+Macrophage and dendritic cell precursor cell
+Hematopoietic stem cell progenitor cell
+Pre-megakaryocyte-erythroid progenitor cell
+Early intermediate precursor cell
+Cajal-Retzius cell
+Bergmann glial cell
+Type IA spiral ganglion neuron
+Type IB spiral ganglion neuron
+Type IC spiral ganglion neuron
+Lake et al.Science.Ex1
+Lake et al.Science.Ex2
+Lake et al.Science.Ex3
+Lake et al.Science.Ex4
+Lake et al.Science.Ex5
+Lake et al.Science.Ex6
+Lake et al.Science.Ex7
+Lake et al.Science.Ex8
+Lake et al.Science.In1
+Lake et al.Science.In2
+Lake et al.Science.In3
+Lake et al.Science.In4
+Lake et al.Science.In5
+Lake et al.Science.In6
+Lake et al.Science.In7
+Lake et al.Science.In8
+Rheaume et al.Nat Commun.1
+Rheaume et al.Nat Commun.2
+Rheaume et al.Nat Commun.3
+Rheaume et al.Nat Commun.4
+Rheaume et al.Nat Commun.5
+Rheaume et al.Nat Commun.6
+Rheaume et al.Nat Commun.7
+Rheaume et al.Nat Commun.8
+Rheaume et al.Nat Commun.9
+Rheaume et al.Nat Commun.10
+Rheaume et al.Nat Commun.11
+Rheaume et al.Nat Commun.12
+Rheaume et al.Nat Commun.13
+Rheaume et al.Nat Commun.14
+Rheaume et al.Nat Commun.15
+Rheaume et al.Nat Commun.16
+Rheaume et al.Nat Commun.17
+Rheaume et al.Nat Commun.18
+Rheaume et al.Nat Commun.19
+Rheaume et al.Nat Commun.20
+Rheaume et al.Nat Commun.21
+Rheaume et al.Nat Commun.22
+Rheaume et al.Nat Commun.23
+Rheaume et al.Nat Commun.24
+Rheaume et al.Nat Commun.25
+Rheaume et al.Nat Commun.26
+Rheaume et al.Nat Commun.27
+Rheaume et al.Nat Commun.28
+Rheaume et al.Nat Commun.29
+Rheaume et al.Nat Commun.30
+Rheaume et al.Nat Commun.31
+Rheaume et al.Nat Commun.32
+Rheaume et al.Nat Commun.33
+Rheaume et al.Nat Commun.34
+Rheaume et al.Nat Commun.35
+Rheaume et al.Nat Commun.36
+Rheaume et al.Nat Commun.37
+Rheaume et al.Nat Commun.38
+Rheaume et al.Nat Commun.39
+Rheaume et al.Nat Commun.40
+Schwalie et al.Nature.P1
+Schwalie et al.Nature.P2
+Schwalie et al.Nature.P3
+Schwalie et al.Nature.G1
+Schwalie et al.Nature.G2
+Schwalie et al.Nature.G3
+Schwalie et al.Nature.G4
+Lee et al.Cell.A
+Lee et al.Cell.B
+Lee et al.Cell.C
+Lee et al.Cell.D
+Lee et al.Cell.E
+1-cell stage cell (Blastomere)
+4-cell stage cell (Blastomere)
+8-cell stage cell (Blastomere)
+Morula cell (Blastomere)

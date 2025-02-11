@@ -1,0 +1,133 @@
+Normal
+Tongue Squamous Cell Carcinoma
+Esophageal Adenocarcinoma
+Glioblastoma
+Hepatocellular Cancer
+Liver Cancer
+Osteosarcoma
+Gastric Cancer
+Pancreatic Ductal Adenocarcinomas
+Serous Ovarian Cancer
+Renal Clear Cell Carcinoma
+Renal Cell Carcinoma
+Colon Cancer
+Breast Cancer
+Colorectal Cancer
+Leukemia
+Pancreatic Cancer
+Prostate Cancer
+Lung Adenocarcinoma
+Cervical Cancer
+Colorectum Cancer
+Head And Neck Squamous Cell Carcinoma
+Lung Cancer
+Cutaneous Squamous Cell Carcinoma
+Malignant Insulinoma
+Ovarian Teratocarcinoma
+Astroblastoma
+Nasopharyngeal Cancer
+Acute Myeloid Leukemia
+B-cell Lymphoma
+Oral Squamous Cell Carcinoma
+Testicular Germ Cell Tumor
+Glioma
+Astrocytoma
+Ductal Breast Carcinoma
+Ovarian Cancer
+Follicular Lymphoma
+Acute Monocytic Leukemia
+Thyroid Cancer
+Infantile Hemangiomas
+Endometrial Cancer
+Synovial Sarcoma
+Malignant Epithelial Neoplasm
+Sarcoma
+Head and neck cancer
+Esophageal Squamous Cell Carcinoma
+Salivary Gland Tumor
+Retinoblastoma
+Lymphoma
+Hepatocellular Carcinoma
+Lentigo Maligna Melanoma
+B cell type MALT lymphoma
+Nephroblastoma
+Non-Hodgkin's Lymphoma
+Malignant Mesothelioma
+Gallbladder Cancer
+Brain cancer
+Neuroblastoma
+Melanoma (circulating)
+Giant Cell Tumor (circulating)
+Gastric Cancer (circulating)
+Prostate Cancer (circulating)
+Breast Cancer (circulating)
+Testicular Germ Cell Tumor (circulating)
+Acute Myelogenous Leukemia
+Primary Central Nervous System Lymphoma
+Pancreatic Ductal Adenocarcinoma
+Larynx Cancer
+Esophageal Cancer
+Chronic Lymphocytic Leukemia
+B-Acute Lymphoblastic Leukemia
+Pleural Tumor
+Melanoma
+Pancreatic adenocarcinoma
+Non-small Cell Lung Cancer
+Multiple Myeloma
+Rectal Cancer
+Hodgkin Lymphoma
+Fibroid
+Leiomyoma
+Rhabdomyosarcoma
+Myeloma
+Oral Cancer
+Teratocarcinoma
+Bladder Cancer
+Uterine Leiomyoma
+AIDS-related Non-hodgkin's Lymphoma
+Intracranial Meningioma
+T-cell Lymphoma
+T-cell Acute Lymphoblastic Leukemia
+Intracranial Germinoma
+Oesophageal Cancer
+Chronic Myeloid Leukemia
+Alveolar Cell Carcinoma
+Gastric Adenocarcinoma
+Non-small Cell Lung Cancer (circulating)
+Gonadoblastoma
+Vascular Tumour
+Kaposi's Sarcoma
+Natural Killer Cell Lymphoma
+B-Cell Lymphoma
+Brain Cancer
+Adenoid Cystic Carcinoma
+Mucoepidermoid Carcinoma
+Lipoma
+Non-Small Cell Lung Cancer
+Lung Squamous Cell Carcinoma
+Small Cell Lung Cancer
+Intestinal Cancer
+Hepatoblastoma
+Cholangiolocellular Carcinoma
+Cholangiocarcinoma
+Intracranial Aneurysm
+Gallbladder Carcinoma
+Tongue Cancer
+Papillary Thyroid Carcinoma
+Hepatocellular Carcinomas
+Lung Carcinoma
+Medulloblastoma
+Pancreatic Cancer (circulating)
+Supratentorial Primitive Neuroectodermal Tumor
+Acute B Lymphoblastic Leukemia
+Acute T Lymphoblastic Leukaemia
+Ewing's Sarcoma
+Ovarian Adenocarcinoma
+Colorectal Cancer (circulating)
+Ependymoma
+CNS Primitive Neuroectodermal Tumor
+Malignant Peripheral Nerve Sheath Tumor
+Chondrosarcoma
+Fibrosarcoma
+Gallbladder cancer
+oligodendroglioma

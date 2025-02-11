@@ -1,0 +1,181 @@
+Kidney
+Liver
+Endometrium
+Germ
+Corneal epithelium
+Placenta
+Periosteum
+Amniotic membrane
+Primitive streak
+Adipose tissue
+Scalp
+Heart
+Chorionic villus
+Brain
+Amniotic fluid
+Cartilage
+Bone
+Retina
+Peripheral blood
+Blood
+Tongue
+Gingiva
+Undefined
+Uterus
+Dental pulp
+Breast
+Stomach
+Nucleus pulposus
+Urine
+Pancreas
+Colon
+Gonad
+Testis
+Bone marrow
+Lung
+Embryo
+Skin
+Thymus
+Blood vessel
+Synovial fluid
+Periodontal ligament
+Lymph node
+Colorectum
+Pancreatic islet
+Synovium
+Oral mucosa
+Skeletal muscle
+Eye
+Esophagus
+Umbilical cord blood
+Hair follicle
+Ovarian follicle
+Limbal epithelium
+Oral cavity
+Nasal concha
+Oviduct
+Cornea
+Sclerocorneal tissue
+Intervertebral disc
+Plasma
+Embryoid body
+Inferior colliculus
+Ovary
+Ovarian cortex
+Subcutaneous adipose tissue
+Prostate
+Myocardium
+Deciduous tooth
+Salivary gland
+Tonsil
+Gastric gland
+Vagina
+Muscle
+Abdominal adipose tissue
+Venous blood
+Parotid gland
+Antecubital vein
+Intestinal crypt
+Endometrium stroma
+Foreskin
+Submandibular gland
+Retinal pigment epithelium
+Lymph
+Gastrointestinal tract
+Lymphoid tissue
+Renal glomerulus
+Pyloric gland
+Corpus luteum
+Nasal epithelium
+Adventitia
+Pancreatic acinar tissue
+Thyroid
+Airway epithelium
+Gall bladder
+Umbilical cord
+Vocal fold
+Fetal brain
+Dermis
+Ascites
+Molar
+Embryonic stem cell
+Midbrain
+Corneal endothelium
+Visceral adipose tissue
+Gastric corpus
+Larynx
+Pluripotent stem cell
+Tooth
+Splenic red pulp
+Gut
+Fetal liver
+Laryngeal squamous epithelium
+Mammary gland
+Pleura
+Mammary epithelium
+Spinal cord
+Small intestinal crypt
+Sputum
+Bronchoalveolar system
+Dorsolateral prefrontal cortex
+Myometrium
+Optic nerve
+Gastric epithelium
+Epithelium
+Adrenal gland
+Sinonasal mucosa
+Serum
+Premolar
+Anterior cruciate ligament
+Bladder
+Jejunum
+Umbilical vein
+Osteoarthritic cartilage
+Decidua
+Sympathetic ganglion
+Alveolus
+Seminal plasma
+Duodenum
+Rectum
+Fetal pancreas
+Spleen
+White adipose tissue
+Brown adipose tissue
+Hippocampus
+Intestine
+Nerve
+Artery
+Lacrimal gland
+Taste bud
+Meniscus
+Peyer patch
+Epidermis
+Small intestine
+Cerebellum
+Inner nuclear layer of retina
+Ganglion cell layer of retina
+Colon epithelium
+Cochlea
+Basilar membrane
+Peritoneal cavity
+Yolk sac
+Heart muscle
+Ileum
+Inner Ear
+Mesonephros
+Bronchiole
+Neural tube
+Mesenteric lymph node
+Carotid artery
+Aorta
+Fetal kidney
+Tendon
+Ligament
+Fat pad
+Whartons jelly
+Embryonic prefrontal cortex
+Embryonic heart
+Embryonic brain
+Trachea
+Large intestine
+Fetal gonad
