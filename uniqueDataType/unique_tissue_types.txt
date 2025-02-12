@@ -20,7 +20,6 @@ Peripheral blood
 Blood
 Tongue
 Gingiva
-Undefined
 Uterus
 Dental pulp
 Breast
