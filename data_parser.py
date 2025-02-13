@@ -143,6 +143,8 @@ def load_cellMarkers(data_folder):
 
                 if key == "cellontologyid" or key == "uberonontologyid":
                     record[key] = record[key].replace("_", ":")
+                else:
+                    record[key] = record[key].lower()
 
             gene_id_dict.setdefault("cellmarker", []).append(
                 dict_sweep(
