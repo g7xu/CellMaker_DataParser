@@ -146,28 +146,27 @@ This is the template for the output data field. The structure within the cellMar
 ```python
 {
   "_id": geneID,
-  "symbol": geneSymbol,
-  "geneRelatedCells": {
-    "CellOntologyID": CellOntologyID
-    "cellName": cellName
-    "cellType": cellType
-    "cancerType": cancerType，
-    "tissueType": tissueType,
-    "UberonOntologyID": UberonOntologyID,
-    "speciesType": speciesType,
-    "markerResource": either "Experiment", "Single-cell sequencing", "Review"
-    "PMID": PMID
+  "cellmarker": {
+    "cellontology": CellOntologyID
+    "cellname": cellName
+    "celltype": cellType
+    "cancertype": cancerType，
+    "tissue": tissueType,
+    "uberon": UberonOntologyID,
+    "species": speciesType,
+    "marker_resource": either "Experiment", "Single-cell sequencing", "Review"
+    "pmid": PMID
     },
     {
-    "CellOntologyID": CellOntologyID
-    "cellName": cellName
-    "cellType": cellType
-    "cancerType": cancerType，
-    "tissueType": tissueType,
-    "UberonOntologyID": UberonOntologyID,
-    "speciesType": speciesType,
-    "markerResource": "Company"
-    "Company": Company_Name
+    "cellontology": CellOntologyID
+    "cellname": cellName
+    "celltype": cellType
+    "cancertype": cancerType，
+    "tissue": tissueType,
+    "uberon": UberonOntologyID,
+    "species": speciesType,
+    "marker_resource": "Company"
+    "company": Company_Name
     }
 }
 ```
