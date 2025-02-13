@@ -183,27 +183,26 @@ The resulting data field should be:
 ```python
 {
     '_id': '248',
-    'symbol': 'ALPI',
-    'geneRelatedCells': [
+    'cellmarker': [
         {
-            'cellName': 'Proximal tubular cell',
-            'cellType': 'Normal cell',
-            'cancerType': 'Normal',
-            'tissueType': 'Kidney',
-            'UberonOntologyID': 'UBERON_0002113',
-            'speciesType': 'Human',
-            'markerResource': 'Experiment',
-            'PMID': '9263997'
+            'cellname': 'proximal tubular cell',
+            'celltype': 'normal cell',
+            'cancertype': 'Normal',
+            'tissue': 'kidney',
+            'uberon': 'UBERON:0002113',
+            'species': 'human',
+            'marker_resource': 'experiment',
+            'pmid': '9263997'
         },
         {
-            'cellName': 'Enterocyte progenitor cell',
-            'cellType': 'Normal cell',
-            'cancerType': 'Normal',
-            'tissueType': 'Small intestine',
-            'UberonOntologyID': 'UBERON_0002108',
-            'speciesType': 'Human',
-            'markerResource': 'Single-cell sequencing',
-            'PMID': '29802404'
+            'cellname': 'Enterocyte progenitor cell',
+            'celltype': 'Normal cell',
+            'cancertype': 'Normal',
+            'tissue': 'small intestine',
+            'uberon': 'UBERON:0002108',
+            'species': 'human',
+            'marker_resource': 'single-cell sequencing',
+            'pmid': '29802404'
         },
     ]
 }
